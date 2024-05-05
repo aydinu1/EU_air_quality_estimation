@@ -1,0 +1,86 @@
+# Feature pipeline config
+encoder_artifact_name: "label_encoder"
+
+# Modeling parameters
+seed: 42
+test_size: 0.25
+local_models_dir: "models"
+local_data_download_dirname: "downloaded_data"
+local_model_download_dirname: "models"
+target_column: "pm2_5"
+model_name: "airquality_model"
+model_selection_metric: "MAE_test"
+
+# CV settings
+n_repeats: 3
+n_splits: 5
+
+# Hyperparameters
+model_hyper_params:
+  max_depth: 10
+  n_estimators: 100
+  min_child_weight: 1.2
+
+# Database tables
+historical_data_table_name: "historical_data"
+inference_data_table_name: "inference_data"
+prediction_data_table_name: "prediction_data"
+
+# historical data
+train_data_expected_columns:
+  - time
+  - pm2_5
+  - city
+  - latitude
+  - longitude
+  - temperature_2m
+  - relativehumidity_2m
+  - precipitation
+  - cloudcover
+  - cloudcover_low
+  - cloudcover_mid
+  - cloudcover_high
+  - windspeed_10m
+  - winddirection_10m
+  - windgusts_10m
+  - month
+  - hour
+
+# inference data
+inference_data_expected_columns:
+  - time
+  - city
+  - latitude
+  - longitude
+  - temperature_2m
+  - relativehumidity_2m
+  - precipitation
+  - cloudcover
+  - cloudcover_low
+  - cloudcover_mid
+  - cloudcover_high
+  - windspeed_10m
+  - winddirection_10m
+  - windgusts_10m
+  - month
+  - hour
+
+# prediction data
+prediction_data_expected_columns:
+  - time
+  - predicted_pm25
+  - city
+  - latitude
+  - longitude
+  - temperature_2m
+  - relativehumidity_2m
+  - precipitation
+  - cloudcover
+  - cloudcover_low
+  - cloudcover_mid
+  - cloudcover_high
+  - windspeed_10m
+  - winddirection_10m
+  - windgusts_10m
+  - month
+  - hour

@@ -6,7 +6,7 @@ The application is built using [CometML](https://www.comet.com/site/) machine le
 [ElephantSQL (PostgreSQL)](https://www.elephantsql.com/) database for data storage, and streamlit for visualizing the estimations.
 Github Actions is used to run the workflows for the model training and deployment on batch processing with schedule.
 
-The app can be accessed at website: https://euairqualityestimation.streamlit.app/
+The app can be accessed at website: https://eu-airqualityestimation.streamlit.app/
 
 **PS: This app has been developed to demonstrate how to build a machine learning pipeline for free using the above-mentioned tools. 
 The model used in the app is a simple regression model and is not optimized for the best performance.**
